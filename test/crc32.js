@@ -1,3 +1,4 @@
+var { context, test } = require( '@jhermsmeier/control' )
 var assert = require( 'assert' )
 var fs = require( 'fs' )
 var path = require( 'path' )
@@ -6,14 +7,14 @@ var crc32 = require( '..' )
 var dataFile = path.join( __dirname, 'data', 'random.bin' )
 var data = fs.readFileSync( dataFile )
 
-describe( 'crc32', function() {
+context( 'crc32', function() {
 
-  specify( 'crc32()', function() {
+  test( 'crc32()', function() {
     var checksum = crc32( data )
     assert.equal( checksum.toString(16), '4c429bb2' )
   })
 
-  specify( 'crc32.createHash()', function( done ) {
+  test( 'crc32.createHash()', function( done ) {
     fs.createReadStream( dataFile )
       .pipe( crc32.createHash() )
       .on( 'error', done )
@@ -26,7 +27,7 @@ describe( 'crc32', function() {
       })
   })
 
-  specify( 'crc32.Hash#update()', function() {
+  test( 'crc32.Hash#update()', function() {
     var hash = crc32.createHash()
       .update( data.slice( 0, 1024 * 1024 * 0.5 ) )
       .update( data.slice( 1024 * 1024 * 0.5 ) )
@@ -34,7 +35,7 @@ describe( 'crc32', function() {
     assert.equal( hash.digest( 'hex' ), '4c429bb2' )
   })
 
-  specify( 'crc32.Hash()', function( done ) {
+  test( 'crc32.Hash()', function( done ) {
     fs.createReadStream( dataFile )
       .pipe( new crc32.Hash() )
       .on( 'error', done )
@@ -47,7 +48,7 @@ describe( 'crc32', function() {
       })
   })
 
-  specify( 'crc32.Hash({ encoding: "hex" })', function( done ) {
+  test( 'crc32.Hash({ encoding: "hex" })', function( done ) {
     fs.createReadStream( dataFile )
       .pipe( new crc32.Hash({ encoding: 'hex' }) )
       .on( 'error', done )

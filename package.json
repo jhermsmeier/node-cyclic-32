@@ -19,7 +19,7 @@
   "main": "lib/crc32.js",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "@jhermsmeier/control": "^1.0.0",
     "nanobench": "^2.1.1"
   },
   "peerDependencies": {},
@@ -33,7 +33,7 @@
     "url": "https://github.com/jhermsmeier/node-cyclic-32/issues"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "control test",
     "benchmark": "node benchmark"
   },
   "bin": {

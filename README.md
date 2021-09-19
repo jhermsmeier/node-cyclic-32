@@ -2,7 +2,6 @@
 [![npm](https://img.shields.io/npm/v/cyclic-32.svg?style=flat-square)](https://npmjs.com/package/cyclic-32)
 [![npm license](https://img.shields.io/npm/l/cyclic-32.svg?style=flat-square)](https://npmjs.com/package/cyclic-32)
 [![npm downloads](https://img.shields.io/npm/dm/cyclic-32.svg?style=flat-square)](https://npmjs.com/package/cyclic-32)
-[![build status](https://img.shields.io/travis/jhermsmeier/node-cyclic-32.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-cyclic-32)
 
 A tiny, streaming, seedable [CRC32] library, compatible with Node's [crypto.Hash API].
 In less than 100 LOC.

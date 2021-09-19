@@ -26,6 +26,26 @@ $ npm install --save cyclic-32
 
 ## Usage
 
+### API
+
+```js
+var checksum = crc32( buffer, seed = 0, table = crc32.TABLE.DEFAULT )
+```
+
+```js
+var checksumStream = crc32.createHash({
+  seed: 0,
+  table: crc32.TABLE.DEFAULT,
+})
+```
+
+**Builtin tables:**
+
+- `crc32.TABLE.DEFAULT`: Standard CRC32
+- `crc32.TABLE.CASTAGNOLI`: Castagnoli
+
+### Examples
+
 ```js
 var crc32 = require( 'cyclic-32' )
 ```

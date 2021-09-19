@@ -32,6 +32,11 @@ var checksum = crc32( buffer, seed = 0, table = crc32.TABLE.DEFAULT )
 ```
 
 ```js
+// Shorthand for Castagnoli
+var castagnoli = crc32.c( buffer, seed = 0, table = crc32.TABLE.DEFAULT )
+```
+
+```js
 var checksumStream = crc32.createHash({
   seed: 0,
   table: crc32.TABLE.DEFAULT,

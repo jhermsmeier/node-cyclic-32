@@ -1,6 +1,6 @@
 {
   "name": "cyclic-32",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Tiny, streaming, seedable CRC32 library, compatible with the crypto.Hash API",
   "license": "MIT",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
